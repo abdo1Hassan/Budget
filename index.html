@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Budget Planner</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- Added for mobile responsiveness -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Budget Planner</h1>
+
+    <!-- Budget Input Section -->
+    <section id="budget-input">
+        <h2>Set Your Budget</h2>
+        <form id="budget-form">
+            <div class="form-group">
+                <label for="total-budget">Total Budget (€):</label>
+                <input type="number" id="total-budget" required value="3650">
+            </div>
+            <div class="form-group">
+                <label for="start-date">Start Date:</label>
+                <input type="date" id="start-date" required value="2023-09-30">
+            </div>
+            <div class="form-group">
+                <label for="end-date">End Date:</label>
+                <input type="date" id="end-date" required value="2023-10-25">
+            </div>
+            <div class="form-group">
+                <label for="weekday-budget">Weekday Daily Budget (€):</label>
+                <input type="number" id="weekday-budget" required value="130">
+            </div>
+            <div class="form-group">
+                <label for="weekend-budget">Weekend Daily Budget (€):</label>
+                <input type="number" id="weekend-budget" required value="150">
+            </div>
+
+            <!-- Obligations Input Section -->
+            <h3>Obligations</h3>
+            <div id="obligations-container">
+                <!-- Existing obligations will be added here dynamically -->
+            </div>
+            <button type="button" id="add-obligation">Add Obligation</button>
+
+            <button type="submit">Set Budget</button>
+        </form>
+    </section>
+
+    <!-- Budget Display Section -->
+    <section id="budget-display" style="display: none;">
+        <h2>Budget Overview</h2>
+        <table id="budget-table">
+            <thead>
+                <tr>
+                    <th>Date</th>
+                    <th>Day/Description</th>
+                    <th>Planned Budget (€)</th>
+                    <th>Actual Expense (€)</th>
+                    <th>Remaining Budget (€)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Budget entries will be dynamically inserted here -->
+            </tbody>
+        </table>
+        <button id="save-expenses">Save Expenses</button>
+    </section>
+
+    <!-- Include JavaScript File -->
+    <script src="script.js"></script>
+</body>
+</html>
